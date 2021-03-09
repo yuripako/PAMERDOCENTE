@@ -5,29 +5,26 @@ class DocenteAcademiaController extends AppController {
 
     public $uses = array('Usuario');
 
-    //METODOS  DE EDGAR
-    public function vistacs() {
-        
-        AppController::isAuthorized();
-        $this->layout = 'pages';
-        $this->set('titPage', '');
-        $this->set('subTitPage', ' '.date("Y"));
-        $this->set('objJS', '<!-- Css -->');
-        $this->set('piePag', '<!-- Java -->'.'<script src="../js/librerias/vistamg.js?18"></script>');
-    }
-   // FIN DE METODOS EDGAR
+    ////////////////////////////////////METODOS  DE EDGAR
+ 
 
-   //METODOS DE ERICK PRADO
-    public function temario_docente(){
-        AppController::isAuthorized();
-        $this->layout = 'pages';
-        $this->set('objJS','<link rel="stylesheet" href="../css/academia_clasedigital.css?1">');
-        // $this->set('piePag','<script src="../js/librerias/acadig_temario.js?1"></script>');
-        $this->set('objJS','<link rel="stylesheet" href="../css/academia_clasedigital.css?1"><script src="../js/librerias/acadig_temario.js?1"></script>');
-        $usuario = $this->Session->read('usuario');
-    }
+  //////////////////////////////////// FIN DE METODOS EDGAR
 
-  // FIN DE METODOS PRADO
+
+
+  ////////////////////////////////////METODOS DE ERICK PRADO
+
+
+ ////////////////////////////////////FIN DE METODOS PRADO
+
+
+
+////////////////////////////////////METODOS DE ERICK HUARACHA
+
+
+ //////////////////////////////////// FIN DE METODOS HUARACHA
+
+
     
     public function getdatos($op = null) {
 
@@ -57,20 +54,29 @@ class DocenteAcademiaController extends AppController {
 
                 switch ($op)
                 {
-                    // EDGAR CASE DE 1-20  ERICK PRADOS DE  21-40 
-                   
-                    //INICIO DE CASE DE EDGAR
-                    case 1:
-                        /*
-                        $cadena = $usuario->correo;                 
-                        $resultado = intval(preg_replace('/[^0-9]+/', '', $cadena), 10);           
-                        $sql = "CALL NPV_DATOSALUMNO_COMBO_SALONES($resultado)";
-                        exit(AppController::getDataTable($sql));
-                        $linea =  $this->request->data['linea'];*/
-                    break;
 
-                    //INICIO DE CASE DE PRADOS
+                    
+                    //  ERICK PRADOS DE  1-50   EDGAR 51-100 HUARCHA 101--->
+                   
+                    //INICIO DE CASE DE PRADO
+
+                    
+                      
+                    //FIN DE PRADO
+
+
+                    //INICIO DE CASE DE EDGAR
                 
+
+
+                    //FIN DE EDGAR
+
+                    
+                    //INICIO DE HUARACHA
+                
+
+
+                    //FIN DE HUARACHA
                    
 
                 }
