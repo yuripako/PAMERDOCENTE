@@ -17,10 +17,17 @@ class DocenteAcademiaController extends AppController {
     }
    // FIN DE METODOS EDGAR
 
-   //METODOS DE ERICK PRADOS
+   //METODOS DE ERICK PRADO
+    public function temario_docente(){
+        AppController::isAuthorized();
+        $this->layout = 'pages';
+        $this->set('objJS','<link rel="stylesheet" href="../css/academia_clasedigital.css?1">');
+        // $this->set('piePag','<script src="../js/librerias/acadig_temario.js?1"></script>');
+        $this->set('objJS','<link rel="stylesheet" href="../css/academia_clasedigital.css?1"><script src="../js/librerias/acadig_temario.js?1"></script>');
+        $usuario = $this->Session->read('usuario');
+    }
 
-
-  // FIN DE METODOS PRADOS
+  // FIN DE METODOS PRADO
     
     public function getdatos($op = null) {
 
