@@ -5,26 +5,16 @@ class DocenteAcademiaController extends AppController {
 
     public $uses = array('Usuario');
 
-    ////////////////////////////////////METODOS  DE EDGAR
- 
-
-  //////////////////////////////////// FIN DE METODOS EDGAR
+    // ----------- METODOS DE EDGAR -----------
+    // ----------- FIN METODOS DE EDGAR -----------
 
 
-
-  ////////////////////////////////////METODOS DE ERICK PRADO
-
-
- ////////////////////////////////////FIN DE METODOS PRADO
+    // ----------- METODOS DE ERICK PRADO -----------
+    // ----------- FIN METODOS DE ERICK PRADO -----------
 
 
-
-////////////////////////////////////METODOS DE ERICK HUARACHA
-
-
- //////////////////////////////////// FIN DE METODOS HUARACHA
-
-
+    // ----------- METODOS DE ERICK HUARACHA -----------
+    // ----------- FIN METODOS DE ERICK HUARACHA -----------
     
     public function getdatos($op = null) {
 
@@ -54,31 +44,16 @@ class DocenteAcademiaController extends AppController {
 
                 switch ($op)
                 {
-
-                    
-                    //  ERICK PRADOS DE  1-50   EDGAR 51-100 HUARCHA 101--->
-                   
-                    //INICIO DE CASE DE PRADO
-
-                    
-                      
-                    //FIN DE PRADO
+                    // ----------- GET DE EDGAR 51 - 100 -----------
+                    // ----------- FIN GET DE EDGAR -----------
 
 
-                    //INICIO DE CASE DE EDGAR
-                
+                    // ----------- GET DE ERICK PRADO 1-50 -----------
+                    // ----------- FIN GET DE ERICK PRADO -----------
 
 
-                    //FIN DE EDGAR
-
-                    
-                    //INICIO DE HUARACHA
-                
-
-
-                    //FIN DE HUARACHA
-                   
-
+                    // ----------- GET DE ERICK HUARACHA 101- 150 -----------
+                    // ----------- FIN GET DE ERICK HUARACHA -----------
                 }
 
             } else {
