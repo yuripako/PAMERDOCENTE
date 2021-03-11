@@ -20,6 +20,19 @@ class DocenteAcademiaController extends AppController {
     
     
     // ----------- METODOS DE EDGAR -----------
+
+    public function rendimiento() {
+        
+        AppController::isAuthorized();
+        $this->layout = 'pages';
+        $this->set('titPage', '');
+        $this->set('subTitPage', ' '.date("Y"));
+        $this->set('objJS', '<!-- Css -->');
+        $this->set('piePag', '<!-- Java -->'.'<script src="../js/librerias/rendimiento.js?31"></script>');
+    }
+
+
+
     // ----------- FIN METODOS DE EDGAR -----------
 
 
@@ -80,6 +93,51 @@ class DocenteAcademiaController extends AppController {
 
 
                     // ----------- GET DE EDGAR 51 - 100 -----------
+
+
+
+                    case 51:
+                        $correo  = $usuario->correo; 
+                        $coreopartes = explode("@",$correo);
+                        $separar = $coreopartes[0];
+                        $partes = explode(".",$separar);
+                        $codigo = $partes[0]." ".$partes[1]; 
+                        $sql = "CALL NPV_DOCENTEACADEMIA_SALON_LINEA('".$codigo."')";
+                        exit(AppController::getDataTable($sql));
+                        break;
+                    
+                    break;
+
+                    case 52:
+                        
+                        $codlinea =  $this->request->data['codlinea'];
+                        $codsalon =  $this->request->data['codsalon'];
+
+                        $sql = "CALL DOCENTE_SP_AREA_CARRERA('$codlinea','$codsalon');";
+                        exit(AppController::getDataTable($sql));
+                     break;
+                      
+                     case 53:
+                            
+                        $codsalon =  $this->request->data['codsalon'];
+                        $prejson = $this->request->data('objJSON');
+                        $json = AppController::JSONisValid($prejson);
+    
+                        $sql = "CALL NPV_TUTOR_ACADEMICO_CARACTERISTICAS_GRAFICA($codsalon)";
+                        exit(AppController::getDataTable($sql));
+                        break;
+ 
+                   case 54:
+                            
+                            $codsalon =  $this->request->data['codsalon'];
+                            $prejson = $this->request->data('objJSON');
+                            $json = AppController::JSONisValid($prejson);
+        
+                            $sql = "CALL SP_DOCENTE_BARRA_SALON('$codsalon')";
+                            exit(AppController::getDataTable($sql));
+                            break;
+
+
                     // ----------- FIN GET DE EDGAR -----------
 
 
