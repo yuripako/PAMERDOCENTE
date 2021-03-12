@@ -1,22 +1,27 @@
-========== GIT CLONE ===================
+========== GIT CLONE ACTUALIZADO ===================
 
-  https://github.com/yuripako/PAMERDOCENTE.git
+https://github.com/yuripako/PAMERDOCENTE.git
 
 ==========CONTROLLER====================
- 
+
+DocenteAcademiaController
 
 ==========JS============================
 
 
 ==========VIEW==========================
 
-DocenteAcademia/____________________
+DocenteAcademia/______
 
 ==========RUTA==========================
 
-http://localhost/pamervirtual/___________
+http://localhost/pamervirtual/_____
 
 ==========NOMBRE DEL MENU================
 
 
-==========SP=============================
+==========SP ACTUALIZADO=============================
+
+SP / SP_EDGAR /
+
+

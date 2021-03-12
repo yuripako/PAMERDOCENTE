@@ -1,4 +1,4 @@
-========== GIT CLONE ===================
+========== GIT CLONE ACTUALIZADO ===================
 
 https://github.com/yuripako/PAMERDOCENTE.git
 
@@ -7,27 +7,23 @@ https://github.com/yuripako/PAMERDOCENTE.git
 
 DocenteAcademiaController
 
-
 ==========JS============================
 
 temario_docente.js
-
 
 ==========VIEW==========================
 
 DocenteAcademia/temario_docente.ctp
 
-
 ==========RUTA==========================
 
 http://localhost/pamervirtual/DocenteAcademia/temario_docente
-
 
 ==========NOMBRE DEL MENU================
 
 Información/Temario
 
-==========SP=============================
+==========SP ACTUALIZADO=============================
 
-NPV_DOCENTEACADEMIA_SALON_LINEA2
-NPV_DOCENTEACADEMIA_CICLO_LINEA
+SP / SP_PRADO / NPV_DOCENTEACADEMIA_SALON_LINEA2
+SP / SP_PRADO / NPV_DOCENTEACADEMIA_CICLO_LINEA
