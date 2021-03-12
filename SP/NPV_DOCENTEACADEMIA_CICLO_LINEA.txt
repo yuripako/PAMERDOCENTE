@@ -1,0 +1,21 @@
+CREATE DEFINER=`developer2021`@`%` PROCEDURE `NPV_DOCENTEACADEMIA_CICLO_LINEA`(
+_correo  VARCHAR(100),
+_linea INT
+)
+BEGIN
+
+select s.codciclo ,s.codsalones,s.nomsalones,
+ l.nomlinea,l.codlinea
+  from ccostos cc
+inner join lineas l on cc.codlinea = l.codlinea
+inner join salones s on  s.codccosto = cc.codccostos
+INNER JOIN   
+(SELECT codsalon FROM distancia_horario WHERE 
+martes LIKE CONCAT("%",_correo,"%") OR miercoles LIKE CONCAT("%",_correo,"%") OR
+jueves LIKE CONCAT("%",_correo,"%") OR viernes LIKE CONCAT("%",_correo,"%") OR
+sabado LIKE CONCAT("%",_correo,"%") OR domingo LIKE CONCAT("%",_correo,"%")
+) b on s.codsalones = b.codsalon
+
+where  l.codlinea=_linea AND s.codciclo=(SELECT DISTINCT codciclo FROM salones ORDER BY codciclo DESC limit 1,1);
+
+END
